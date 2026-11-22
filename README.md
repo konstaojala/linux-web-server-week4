@@ -31,7 +31,7 @@ Public IP: 195.148.23.252
 - Server a: http://193.166.24.178/
 - Week 2 counter: http://193.166.24.178/week2/
 - Week 3 report: http://193.166.24.178/week3/
-- Week 4 read-only counter: http://195.148.23.252/viikko4/
+- Week 4 read-only counter: http://195.148.23.252/week4/
 
 ## Automated backups
 

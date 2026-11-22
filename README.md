@@ -45,7 +45,7 @@ to:
 
 Each backup is saved in a timestamped directory.
 
-The cron schedule is:
+Cron schedule;
 
 0 * * * * /usr/bin/bash /home/ubuntu/week4/backup.sh >> /home/ubuntu/week4/cron.log 2>&1
 
@@ -53,7 +53,7 @@ This schedules a backup every hour.
 
 The SSH connection uses a dedicated backup user and SSH key.
 
-A manual backup and file restoration test were completed
+Manual backup and file restoration test were completed
 successfully. Automatic cron execution is checked separately.
 
 ## MariaDB Replication
@@ -62,18 +62,15 @@ Server a is the primary MariaDB server.
 Server b is the replica.
 
 Changes to the visitor counter are replicated automatically
-from server a to Server b.
+from server a to server b.
 
-The week 2 Flask application updates the counter on Server a.
+The week 2 Flask application updates the counter on server a.
 
 Week 4 Flask application on server b only reads the
 replicated visitor count. Refreshing the Week 4 page does
 not increase the count.
 
 ## Testing
-
-The following tests were completed:
-
 - SSH connection between the servers
 - Manual rsync backup
 - File restoration and checksum comparison
@@ -81,10 +78,9 @@ The following tests were completed:
 - Read-only counter display on server b
 - Server b reboot
 - Automatic startup of Nginx, MariaDB, and Gunicorn
-- Database replication after Server B reboot
+- Database replication after server b reboot
 
 ## Security
-
 - SSH access uses key authentication.
 - Backup access uses a dedicated restricted account.
 - MariaDB replication uses the private network.
@@ -92,8 +88,7 @@ The following tests were completed:
 - Database passwords and private SSH keys are not stored
   in this GitHub repository.
 
-## Important Note
-
+## Note
 MariaDB replication is not a substitute for a database backup.
 The hourly rsync script backs up website files, while MariaDB
 replication maintains a second copy of the visitor counter.

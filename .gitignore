@@ -1,0 +1,10 @@
+*.db
+*.sqlite*
+*.log
+.env
+*password*
+*.pem
+*.ppk
+week4_backup_key*
+__pycache__/
+venv/

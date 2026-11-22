@@ -1,0 +1,5 @@
+[mariadb]
+server_id = 2
+relay_log = /var/lib/mysql/mariadb-relay-bin
+read_only = ON
+bind_address = 127.0.0.1

@@ -1,0 +1,15 @@
+# Week 4 - Automated website backup
+#
+# Server a runs the backup every hour.
+# The script uses rsync over SSH to copy website files to server b.
+#
+# Source: /var/www/html/
+# Destination: /srv/backups/server-a/
+#
+# Install this schedule using: crontab -e
+
+0 * * * * /usr/bin/bash /home/ubuntu/week4/backup.sh >> /home/ubuntu/week4/cron.log 2>&1
+
+# Each successful backup is stored in a timestamped folder.
+# Backup results are also recorded in:
+# /home/ubuntu/week4/backup.log
